@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="navbar bg-[#4c68ff]">
+    <div class="flex-1">
+      <a href="./index.html" class="btn btn-ghost text-xl text-white">Bloging</a>
+    </div>
+    <div class="flex-none">
+      
+      <ul tabindex="0" class="text-[#fff] flex gap-11">
+          
+        <li><a href="./posts.html">Posts</a></li>
+      </ul>
+      <div class="dropdown dropdown-end">
+        <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+          <div class="w-10 rounded-full">
+            <img alt="Tailwind CSS Navbar component"
+              src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+          </div>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+          
+          <li><a id="user-logout">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="bg-[#FFF6F6] ml-5 mr-5 mt-5 mb-11">
+
+    <div class="p-[50px] w-[50%] mx-auto">
+
+      <h1 class="text-[#000] text-[30px] p-[20px] font-bold">Dashboard</h1>
+
+      <form id="form">
+
+        <div class="mt-[100px]">
+
+          <input type="text" name="post_title" id="post_title"
+            class="bg-gray-50 border border-gray-300 font-light text-[#3F9586] rounded-lg  w-full p-2.5"
+            placeholder="Enter Post Title" required="">
+
+          <textarea id="post_description" rows="10" cols="90"
+            class="bg-gray-50 border border-gray-300 font-light text-[#3F9586] rounded-lg  w-full mt-5 p-2.5"
+            placeholder="Enter Post Description" required=""></textarea>
+
+          <div class="text-right">
+
+            <button type="submit"
+              class="w-[20%] text-white bg-[#4C68FF] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 mt-5">POST
+              NOW</button>
+          </div>
+
+        </div>
+
+      </form>
+    </div>
+
+    <div class="container w-[70%] mx-auto">
+
+      <h1 class="text-[#000] text-[30px] p-[20px] font-bold">My Blogs</h1>
+
+      <div class="w-[80%]">
+        <div id="rendardPost">
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+
+
+  <script type="module" src="./script/postadd.js"></script>
+
+  <script type="module" src="./script/logout.js"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</body>
+
+</html>
